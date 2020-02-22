@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/go/src/practicing-redis-golang
+    container_name: golang_api
+    restart: always
+    ports:
+      - "8787:8787"
+    tty: true
+    depends_on:
+      - redis
+    networks:
+      - fullstack
+  redis:
+    image: redis:latest
+    container_name: golang_redis
+    restart: always
+    ports:
+      - "6378:6379"
+    tty: true
+    networks:
+      - fullstack
+networks:
+  fullstack:
+    driver: bridge

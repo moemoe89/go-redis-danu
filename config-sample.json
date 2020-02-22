@@ -1,0 +1,8 @@
+{
+  "port": "8787",
+  "redis": {
+    "addr": "localhost:6379",
+    "password": "",
+    "db": 0
+  }
+}

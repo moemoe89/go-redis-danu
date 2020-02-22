@@ -1,35 +1,36 @@
+//
+//  Practicing Redis
+//
+//  Copyright © 2016. All rights reserved.
+//
+
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/itsjamie/gin-cors"
-	"practicing-redis-golang/controllers"
-	"time"
+	ap "github.com/moemoe89/practicing-redis-golang/api"
+	conf "github.com/moemoe89/practicing-redis-golang/config"
+	"github.com/moemoe89/practicing-redis-golang/routers"
+
+	"fmt"
+
+	"github.com/DeanThompson/ginpprof"
 )
 
 func main() {
-	r := gin.Default()
+	client, err := conf.InitDB()
+	if err != nil {
+		panic(err)
+	}
 
-	r.Use(cors.Middleware(cors.Config{
-		Origins:        "*",
-		Methods:        "GET, PUT, POST, DELETE",
-		RequestHeaders: "Origin, Authorization, Content-Type",
-		ExposedHeaders: "",
-		MaxAge: 50 * time.Second,
-		Credentials: true,
-		ValidateHeaders: false,
-	}))
+	log := conf.InitLog()
 
-	r.GET("/ping",controllers.Ping)
+	repo := ap.NewRedisRepository(client)
+	svc := ap.NewService(log, repo)
 
-	r.POST("/hset",controllers.HSet)
-	r.POST("/set",controllers.Set)
-	r.POST("/sadd",controllers.SAdd)
-
-	r.GET("/get/:key",controllers.Get)
-	r.GET("/sadd/:key",controllers.GetSAdd)
-	r.GET("/hset/:key/:field",controllers.GetHSet)
-	r.DELETE("/delete/:key",controllers.Delete)
-
-	r.Run()
+	app := routers.GetRouter(log, svc)
+	ginpprof.Wrap(app)
+	err = app.Run(":" + conf.Configuration.Port)
+	if err != nil {
+		panic(fmt.Sprintf("Can't start the app: %s", err.Error()))
+	}
 }
