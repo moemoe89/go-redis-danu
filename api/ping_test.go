@@ -20,7 +20,7 @@ import (
 func TestPingRoute(t *testing.T) {
 	log := config.InitLog()
 
-	router:= routers.GetRouter(log, nil)
+	router := routers.GetRouter(log, nil)
 
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/ping", nil)

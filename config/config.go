@@ -18,7 +18,7 @@ import (
 // ConfigurationModel represent the configuration model
 type ConfigurationModel struct {
 	Port  string `json:"port"`
-	Redis struct{
+	Redis struct {
 		Addr     string `json:"addr"`
 		Password string `json:"password"`
 		DB       int    `json:"db"`

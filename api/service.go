@@ -104,4 +104,3 @@ func (s *implService) Delete(key string) (int, error) {
 
 	return 0, nil
 }
-

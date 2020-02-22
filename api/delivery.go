@@ -143,7 +143,7 @@ func (ct *ctrl) GetSAdd(c *gin.Context) {
 	c.JSON(http.StatusOK, model.NewGenericResponse(http.StatusOK, cons.OK, []string{"Data has been retrieved"}, datas))
 }
 
-func (ct *ctrl) Delete(c *gin.Context){
+func (ct *ctrl) Delete(c *gin.Context) {
 	key := c.Param("key")
 
 	status, err := ct.svc.Delete(key)

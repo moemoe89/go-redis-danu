@@ -56,9 +56,9 @@ func (v *KeyValuesForm) Validate() []string {
 }
 
 type KeyFieldValueForm struct {
-	Key   string  `json:"key"`
-	Field string  `json:"field"`
-	Value string  `json:"value"`
+	Key   string `json:"key"`
+	Field string `json:"field"`
+	Value string `json:"value"`
 }
 
 // Validate represent the validation method from KeyValueForm

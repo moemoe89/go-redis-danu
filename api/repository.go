@@ -45,18 +45,18 @@ func (r *redisRepository) HSet(key, field, value string) (bool, error) {
 	return hset.Val(), hset.Err()
 }
 
-func (r *redisRepository) Get(key  string) (string, error) {
+func (r *redisRepository) Get(key string) (string, error) {
 	get := r.Client.Get(key)
 	return get.Result()
 }
 
-func (r *redisRepository) GetSadd(key  string) ([]string, error) {
+func (r *redisRepository) GetSadd(key string) ([]string, error) {
 	get := r.Client.SMembers(key)
 	return get.Result()
 }
 
-func (r *redisRepository) GetHSet(key, field  string) (string, error) {
-	get := r.Client.HGet(key,field)
+func (r *redisRepository) GetHSet(key, field string) (string, error) {
+	get := r.Client.HGet(key, field)
 	return get.Result()
 }
 
