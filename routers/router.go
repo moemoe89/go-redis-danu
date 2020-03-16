@@ -8,6 +8,7 @@ package routers
 
 import (
 	ap "github.com/moemoe89/practicing-redis-golang/api"
+	h "github.com/moemoe89/practicing-redis-golang/api/delivery/http"
 	mw "github.com/moemoe89/practicing-redis-golang/api/middleware"
 
 	"github.com/gin-gonic/gin"
@@ -22,7 +23,7 @@ func GetRouter(log *logrus.Entry, svc ap.Service) *gin.Engine {
 	r.GET("/", ap.Ping)
 	r.GET("/ping", ap.Ping)
 
-	ctrl := ap.NewCtrl(log, svc)
+	ctrl := h.NewCtrl(log, svc)
 
 	r.POST("/set", ctrl.Set)
 	r.POST("/sadd", ctrl.SAdd)

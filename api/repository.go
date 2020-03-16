@@ -9,7 +9,7 @@ package api
 import (
 	"time"
 
-	"gopkg.in/redis.v5"
+	"github.com/go-redis/redis"
 )
 
 // Repository represent the repositories
@@ -24,11 +24,11 @@ type Repository interface {
 }
 
 type redisRepository struct {
-	Client *redis.Client
+	Client redis.Cmdable
 }
 
 // NewRedisRepository will create an object that represent the Repository interface
-func NewRedisRepository(Client *redis.Client) Repository {
+func NewRedisRepository(Client redis.Cmdable) Repository {
 	return &redisRepository{Client}
 }
 

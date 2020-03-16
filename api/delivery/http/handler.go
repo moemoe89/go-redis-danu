@@ -4,9 +4,10 @@
 //  Copyright © 2016. All rights reserved.
 //
 
-package api
+package http
 
 import (
+	ap "github.com/moemoe89/practicing-redis-golang/api"
 	"github.com/moemoe89/practicing-redis-golang/api/api_struct/form"
 	"github.com/moemoe89/practicing-redis-golang/api/api_struct/model"
 	cons "github.com/moemoe89/practicing-redis-golang/constant"
@@ -21,11 +22,11 @@ import (
 // ctrl struct represent the delivery for controller
 type ctrl struct {
 	log *logrus.Entry
-	svc Service
+	svc ap.Service
 }
 
 // NewCtrl will create an object that represent the ctrl struct
-func NewCtrl(log *logrus.Entry, svc Service) *ctrl {
+func NewCtrl(log *logrus.Entry, svc ap.Service) *ctrl {
 	return &ctrl{log, svc}
 }
 

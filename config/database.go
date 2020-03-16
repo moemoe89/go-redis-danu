@@ -9,7 +9,7 @@ package config
 import (
 	"fmt"
 
-	"gopkg.in/redis.v5"
+	"github.com/go-redis/redis"
 )
 
 // InitDB will create a variable that represent the redis.Client
