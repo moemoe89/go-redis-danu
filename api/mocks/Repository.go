@@ -66,8 +66,8 @@ func (_m *Repository) GetHSet(key string, field string) (string, error) {
 	return r0, r1
 }
 
-// GetSadd provides a mock function with given fields: key
-func (_m *Repository) GetSadd(key string) ([]string, error) {
+// GetSAdd provides a mock function with given fields: key
+func (_m *Repository) GetSAdd(key string) ([]string, error) {
 	ret := _m.Called(key)
 
 	var r0 []string

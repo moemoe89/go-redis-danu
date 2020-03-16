@@ -109,7 +109,7 @@ func TestGet(t *testing.T) {
 	assert.Equal(t, val, res)
 }
 /*
-func TestGetSadd(t *testing.T) {
+func TestGetSAdd(t *testing.T) {
 	mr, err := miniredis.Run()
 	if err != nil {
 		t.Fatalf("an error '%s' was not expected when opening a stub database connection", err)
@@ -126,7 +126,7 @@ func TestGetSadd(t *testing.T) {
 	mock.On("GetSadd", key).Return(redis.NewStringSliceResult(val, nil))
 
 	r := ap.NewRedisRepository(mock)
-	res, err := r.GetSadd(key)
+	res, err := r.GetSAdd(key)
 	assert.NoError(t, err)
 	assert.Equal(t, val, res)
 }

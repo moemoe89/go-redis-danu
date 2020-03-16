@@ -76,7 +76,7 @@ func (s *implService) Get(key string) (string, int, error) {
 }
 
 func (s *implService) GetSAdd(key string) ([]string, int, error) {
-	datas, err := s.repository.GetSadd(key)
+	datas, err := s.repository.GetSAdd(key)
 	if err != nil {
 		s.log.Errorf("can't get sadd data: %s", err.Error())
 		return nil, http.StatusInternalServerError, errors.New("Oops! Something went wrong. Please try again later")

@@ -19,7 +19,7 @@ type Repository interface {
 	HSet(key, field, value string) (bool, error)
 	Get(key string) (string, error)
 	GetHSet(key, field string) (string, error)
-	GetSadd(key string) ([]string, error)
+	GetSAdd(key string) ([]string, error)
 	Delete(key string) error
 }
 
@@ -50,7 +50,7 @@ func (r *redisRepository) Get(key string) (string, error) {
 	return get.Result()
 }
 
-func (r *redisRepository) GetSadd(key string) ([]string, error) {
+func (r *redisRepository) GetSAdd(key string) ([]string, error) {
 	get := r.Client.SMembers(key)
 	return get.Result()
 }

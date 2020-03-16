@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/moemoe89/practicing-redis-golang.svg?branch=master)](https://travis-ci.org/moemoe89/practicing-redis-golang)
-[![Coverage Status](https://coveralls.io/repos/github/moemoe89/practicing-redis-golang/badge.svg?branch=master)](https://coveralls.io/github/moemoe89/practicing-redis-golang?branch=master)
+[![codecov](https://codecov.io/gh/moemoe89/practicing-redis-golang/branch/master/graph/badge.svg)](https://codecov.io/gh/moemoe89/practicing-redis-golang)
 [![Go Report Card](https://goreportcard.com/badge/github.com/moemoe89/practicing-redis-golang)](https://goreportcard.com/report/github.com/moemoe89/practicing-redis-golang)
 
 # PRACTICING-REDIS-GOLANG #
