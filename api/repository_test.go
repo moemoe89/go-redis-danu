@@ -7,7 +7,7 @@
 package api_test
 
 import (
-	ap "github.com/moemoe89/practicing-redis-golang/api"
+	ap "github.com/moemoe89/go-redis-danu/api"
 
 	"time"
 	"testing"

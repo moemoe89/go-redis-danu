@@ -7,9 +7,9 @@
 package routers
 
 import (
-	ap "github.com/moemoe89/practicing-redis-golang/api"
-	h "github.com/moemoe89/practicing-redis-golang/api/delivery/http"
-	mw "github.com/moemoe89/practicing-redis-golang/api/middleware"
+	ap "github.com/moemoe89/go-redis-danu/api"
+	h "github.com/moemoe89/go-redis-danu/api/delivery/http"
+	mw "github.com/moemoe89/go-redis-danu/api/middleware"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"

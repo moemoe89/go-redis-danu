@@ -7,9 +7,9 @@
 package api_test
 
 import (
-	ap "github.com/moemoe89/practicing-redis-golang/api"
-	"github.com/moemoe89/practicing-redis-golang/api/mocks"
-	"github.com/moemoe89/practicing-redis-golang/config"
+	ap "github.com/moemoe89/go-redis-danu/api"
+	"github.com/moemoe89/go-redis-danu/api/mocks"
+	"github.com/moemoe89/go-redis-danu/config"
 
 	"errors"
 	"net/http"

@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - .:/go/src/github.com/moemoe89/practicing-redis-golang
+      - .:/go/src/github.com/moemoe89/go-redis-danu
     container_name: golang_api
     restart: always
     ports:

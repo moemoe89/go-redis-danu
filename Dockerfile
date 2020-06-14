@@ -1,13 +1,13 @@
 FROM golang:latest
 
-RUN mkdir -p /go/src/practicing-redis-golang
+RUN mkdir -p /go/src/go-redis-danu
 
-WORKDIR /go/src/practicing-redis-golang
+WORKDIR /go/src/go-redis-danu
 
-COPY . /go/src/practicing-redis-golang
+COPY . /go/src/go-redis-danu
 
 RUN go get bitbucket.org/liamstask/goose/cmd/goose
 RUN go mod download
 RUN go install
 
-ENTRYPOINT /go/bin/practicing-redis-golang
+ENTRYPOINT /go/bin/go-redis-danu

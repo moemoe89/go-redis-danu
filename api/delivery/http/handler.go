@@ -7,10 +7,10 @@
 package http
 
 import (
-	ap "github.com/moemoe89/practicing-redis-golang/api"
-	"github.com/moemoe89/practicing-redis-golang/api/api_struct/form"
-	"github.com/moemoe89/practicing-redis-golang/api/api_struct/model"
-	cons "github.com/moemoe89/practicing-redis-golang/constant"
+	ap "github.com/moemoe89/go-redis-danu/api"
+	"github.com/moemoe89/go-redis-danu/api/api_struct/form"
+	"github.com/moemoe89/go-redis-danu/api/api_struct/model"
+	cons "github.com/moemoe89/go-redis-danu/constant"
 
 	"net/http"
 	"time"

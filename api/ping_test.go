@@ -7,8 +7,8 @@
 package api_test
 
 import (
-	"github.com/moemoe89/practicing-redis-golang/config"
-	"github.com/moemoe89/practicing-redis-golang/routers"
+	"github.com/moemoe89/go-redis-danu/config"
+	"github.com/moemoe89/go-redis-danu/routers"
 
 	"net/http"
 	"net/http/httptest"

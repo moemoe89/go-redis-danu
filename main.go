@@ -7,9 +7,9 @@
 package main
 
 import (
-	ap "github.com/moemoe89/practicing-redis-golang/api"
-	conf "github.com/moemoe89/practicing-redis-golang/config"
-	"github.com/moemoe89/practicing-redis-golang/routers"
+	ap "github.com/moemoe89/go-redis-danu/api"
+	conf "github.com/moemoe89/go-redis-danu/config"
+	"github.com/moemoe89/go-redis-danu/routers"
 
 	"fmt"
 

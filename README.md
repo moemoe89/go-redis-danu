@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/moemoe89/practicing-redis-golang.svg?branch=master)](https://travis-ci.org/moemoe89/practicing-redis-golang)
-[![codecov](https://codecov.io/gh/moemoe89/practicing-redis-golang/branch/master/graph/badge.svg)](https://codecov.io/gh/moemoe89/practicing-redis-golang)
-[![Go Report Card](https://goreportcard.com/badge/github.com/moemoe89/practicing-redis-golang)](https://goreportcard.com/report/github.com/moemoe89/practicing-redis-golang)
+[![Build Status](https://travis-ci.org/moemoe89/go-redis-danu.svg?branch=master)](https://travis-ci.org/moemoe89/go-redis-danu)
+[![codecov](https://codecov.io/gh/moemoe89/go-redis-danu/branch/master/graph/badge.svg)](https://codecov.io/gh/moemoe89/go-redis-danu)
+[![Go Report Card](https://goreportcard.com/badge/github.com/moemoe89/go-redis-danu)](https://goreportcard.com/report/github.com/moemoe89/go-redis-danu)
 
-# PRACTICING-REDIS-GOLANG #
+# GO-REDIS-DANU #
 
 Practicing Redis Using Golang (Gin Gonic Framework) as Programming Language, Redis as Database
 
@@ -13,7 +13,7 @@ Your project directory structure should look like this
   |
   +--+ src/github.com/moemoe89
   |  |
-  |  +--+ practicing-redis-golang/
+  |  +--+ go-redis-danu/
   |     |
   |     +--+ main.go
   |        + api/
@@ -39,7 +39,7 @@ Your project directory structure should look like this
 $ mkdir -p src/github.com/moemoe89
 $ cd src/github.com/moemoe89
 $ git clone <url>
-$ mv <cloned directory> practicing-redis-golang
+$ mv <cloned directory> go-redis-danu
 ```
 
 ## Running Application
